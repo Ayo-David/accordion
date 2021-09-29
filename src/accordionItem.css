@@ -1,0 +1,41 @@
+.accordion__item {
+  font-size: 15px;
+}
+.accordion__item > button {
+  font-size: 15px;
+  background-color: blueviolet;
+  padding: 0.5rem;
+  color: white;
+  font-weight: 600;
+  border: 0px;
+  width: 300px;
+  text-align: left;
+  cursor: pointer;
+}
+.accordion__item > button > span {
+  color: white;
+  font-weight: 600;
+  margin-left: auto;
+  margin-right: 20px;
+  float: right;
+}
+.accordion__item > hr {
+  border-bottom: 1px solid blueviolet;
+  opacity: 0.8;
+}
+.answer {
+  font-size: 12px;
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
+}
+.content__wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height ease 0.2s;
+}
+/* using two classes on one element  */
+/* used in the initial method */
+.content__wrapper.content__open {
+  height: 100px;
+  /* overflow: auto; */
+}
