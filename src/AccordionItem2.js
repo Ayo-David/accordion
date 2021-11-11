@@ -11,6 +11,10 @@ const AccordionItem = ({ key, faq, onClick, active, clicked, keyis }) => {
     //     if (index === clicked) return setClicked(0)
     //     setClicked(index)
     // }
+
+    //the concept for this solution is that when you click the button it set its key as setClicked
+    //and then as it renders it will check if the index === set value and the show the hidden
+    //if the button us clicked and set value is same as the index, then reset it to zero
     return (
         <li className='accordion__item' key={keyis}>
             <button className="button" onClick={onClick}>
