@@ -4,6 +4,7 @@ import './accordionItem.css'
 const AccordionItem = ({ key, content, onToggle, active }) => {
     const [clicked, setClicked] = useState(0)
     const { question, answer } = content
+    //console.log(content)
     const getHeight = useRef()
 
     const handleToggle = (index) => {
