@@ -1,10 +1,13 @@
 import React, { useRef, useState } from 'react';
 import './accordionItem.css'
 
-const AccordionItem = ({ key, content, onToggle, active }) => {
+const AccordionItem = ({ key, content, onToggle, active, keyis }) => {
+    //with inner clicked, each accordion hasit own clicked state 
+    //and each changes as you click on a specific accordion
     const [clicked, setClicked] = useState(0)
     const { question, answer } = content
-    //console.log(content)
+    //console.log('key:', keyis)
+    //console.log('clicked:', clicked)
     const getHeight = useRef()
 
     const handleToggle = (index) => {
@@ -13,12 +16,15 @@ const AccordionItem = ({ key, content, onToggle, active }) => {
     }
     return (
         <li className='accordion__item' key={key}>
+            {/* <button className="button" onClick={onToggle}> */}
             <button className="button" onClick={() => handleToggle(key)}>
                 {question}
                 <span className="control">{key !== clicked ? "+" : "-"}</span>
+                {/* <span className="control">{active ? "+" : "-"}</span> */}
             </button>
-            {/* <div className={`content__wrapper ${key === clicked ? "content__open" : ''} `}> */}
-            <div ref={getHeight} className='content__wrapper' style={key === clicked ? { height: getHeight.current.scrollHeight } : { height: "0px" }}>
+            <div className={`content__wrapper ${key === clicked ? "content__open" : ''} `}>
+                {/* <div className={`content__wrapper ${active ? "content__open" : ''} `}> */}
+                {/* <div ref={getHeight} className='content__wrapper' style={key === clicked ? { height: getHeight.current.scrollHeight } : { height: "0px" }}> */}
                 <div className="answer">{answer}</div>
             </div>
             <hr />

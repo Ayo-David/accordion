@@ -21,8 +21,8 @@ const AccordionItem = ({ key, faq, onClick, active, clicked, keyis }) => {
                 {question}
                 <span className="control">{keyis !== clicked ? "+" : "-"}</span>
             </button>
-            {/* <div className={`content__wrapper ${key === clicked ? "content__open" : ''} `}> */}
-            <div ref={getHeight} className='content__wrapper' style={keyis === clicked ? { height: getHeight.current.scrollHeight } : { height: "0px" }}>
+            <div className={`content__wrapper content_open`}>
+                {/* <div ref={getHeight} className='content__wrapper' style={keyis === clicked ? { height: getHeight.current.scrollHeight } : { height: "0px" }}> */}
                 <div className="answer">{answer}</div>
             </div>
             <hr />

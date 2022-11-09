@@ -36,6 +36,7 @@
 /* using two classes on one element  */
 /* used in the initial method */
 .content__wrapper.content__open {
-  height: 100px;
+  height: auto;
+  /* height: 100px; */
   /* overflow: auto; */
 }
