@@ -2,8 +2,10 @@ import React, { useRef, useState } from 'react';
 import './accordionItem.css'
 
 const AccordionItem = ({ key, content, onToggle, active, keyis }) => {
-    //with inner clicked, each accordion hasit own clicked state 
+    //with inner clicked, each accordion has it own clicked state 
     //and each changes as you click on a specific accordion
+    //to achieve this we can use a boolean state for each accordionitem.
+    //this boolean is peculiar ro each accordion item and changes per each
     const [clicked, setClicked] = useState(0)
     const { question, answer } = content
     //console.log('key:', keyis)
